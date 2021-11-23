@@ -137,7 +137,7 @@ for(i = 0; i < boxElement.length; i++) {
 
 
 function InsertClass (member) {
-  const BoxLocal = document.getElementById("BoxLocal");
+  const BoxLocal = document.getElementById("boxlocal");
   BoxLocal.innerHTML +=
   
   `
@@ -155,6 +155,63 @@ function InsertClass (member) {
   `
 
 };
+
+  // AGGIUNGO LA CLASSE SELECT
+
+  const RowLocal = document.getElementById("rowselect");
+  RowLocal.innerHTML +=
+  
+  `
+  <div class="col-6 text-light d-flex justify-content-around align-items-center">
+    <h1 class=""> FILTRA PER TIPO </h1>
+  <select class="form-select w-25 h-50 bg-warning " size="3" aria-label="size 2 select example">
+    <option value="1" class="all">ALL</option>
+    <option value="2"class="animal">ANIMAL</option>
+    <option value="3"class="vegetable">VEGETABLE</option>
+    <option value="3"class="user">USER</option>
+  </select> 
+  
+  
+  `;
+
+  // Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
+
+  function AnimalClick() {
+    
+    boxElement.forEach(FunctionType)
+    
+    function FunctionType (element) {
+      const type = element.type;
+      console.log(type);
+      if(type === animal) {
+        
+      }
+
+  };
+
+  };
+
+
+
+
+
+
+// document.querySelector("animal").addEventListener("click", AnimalClick());
+// document.querySelector("user").addEventListener("click", UserSelect());
+// document.querySelector("vegetable").addEventListener("click", VegetableSelect());
+
+
+// const result = boxElement.filter(word => boxElement.type == animal);
+// console.log(result);
+
+
+// const result = words.filter(word => word.length > 6);
+
+// const result = words.filter(word => word.length > 6);
+
+
+
+
 
 
 
